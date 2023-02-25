@@ -33,9 +33,43 @@ I used [GeoGebra](https://www.geogebra.org/) to determine hardpoints of letters 
 ## RQT Graph
 <img  alt="Coding" width="500" src="media/rqt_graph.png">
 
+### PID configuration
+
+Playing with configuration parameters should be done with caution, as they can cause instability.
+
+```c++
+/******************************************************************************
+ * Configuration
+ *******************************************************************************/
+#define VEL                              0.5
+#define SWITCHING_VEL                    2
+#define POSE_TOLERANCE                   0.1
+#define DISTANCE_TOLERANCE               0.0001
+#define ANGLE_TOLERANCE                  0.0001
+/* PID linear velocity output constrain */
+#define PID_MIN_LINEAR_VEL               -5
+#define PID_MAX_LINEAR_VEL               5
+/* PID angular velocity output constrain */
+#define PID_MIN_ANGULAR_VEL             -2
+#define PID_MAX_ANGULAR_VEL              2
+/* PID param of Distance  */
+#define PID_LINEAR_KP                    10
+#define PID_LINEAR_KI                    0
+#define PID_LINEAR_KD                    8
+/* PID param of Angle  */
+#define PID_ANGLE_KP                     10
+#define PID_ANGLE_KI                     0
+#define PID_ANGLE_KD                     9
+```
+There are some problems I took into consideration while implementing PID, like output constraints and integral windup (output saturation).
+
 ## Future work
 
- - Make anther node with python (Matplotlib) to plot data in runtime 
+ - Make anther node with python (Matplotlib) to plot data in runtime
+ - Add derivative filter for PID
+ - Runtime configuration for PID parameters
+ - Implement discrete PID
+ 
 ## Referance
  - https://github.com/ros/ros_tutorials/tree/821a8ae33c6da1a70e21453392f6980380f670f8/turtlesim
  - http://motion.cs.illinois.edu/RoboticSystems/CoordinateTransformations.html
