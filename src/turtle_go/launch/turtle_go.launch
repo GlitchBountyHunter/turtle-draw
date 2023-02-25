@@ -1,0 +1,10 @@
+<launch>
+
+    <!-- Turtlesim Node-->
+    <node pkg="turtlesim" name="sim" type="turtlesim_node" output="screen" launch-prefix="gnome-terminal --command"/>
+    <!-- turtle_go Node-->
+    <node pkg="turtle_go" name="turtle_go" type="turtle_go" output="screen" launch-prefix="gnome-terminal --command"/>
+    <!-- turtle_sub_cmdvel Node-->
+    <node pkg="turtle_sub_cmdvel" name="turtle_cmdVel_Reading" type="turtle_go_sub" output="screen" launch-prefix="gnome-terminal --command"/>
+    
+</launch>
