@@ -63,6 +63,10 @@ Playing with configuration parameters should be done with caution, as they can c
 ```
 There are some problems I took into consideration while implementing PID, like output constraints and integral windup (output saturation).
 
+<img  alt="Coding" width="500" src="media/before_pid.png">
+<img  alt="Coding" width="500" src="media/after_pid.png">
+
+
 ## Future work
 
  - Make anther node with python (Matplotlib) to plot data in runtime
