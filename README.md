@@ -4,7 +4,6 @@ Turtlesim c++ package for drawing
 <img  alt="Coding" width="500" src="media/sim.gif">
 
 This project has 3 Packages:
-  - ***turtlesim***  I did not implement this Packages but i customized it
   - ***turtle_go***  position control used to send cmd_vel to turtlesim and recive pose of the robot i implement this with oop to avoid working with nasty global variable
   - ***turtle_sub_cmdvel**** just used to subscribe for cmd_vel and print it out
 
